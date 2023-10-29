@@ -35,9 +35,79 @@
 
 				<!-- One -->
 					<section id="one">
-						<h1>In Progress</h1>
-					</section>
+						<h1>Anisotropic Distribution of Subhalos: Coherent Accretion and Inner Orbits </h1>
 
+						<p>
+						Cosmological simulations provide details for us to understand the Universe. We study galaxy assembly and structure formation using simulations. Due to gravity, dark matter collapse into haloes. Galaxies are assembled and reside in dark matter haloes, while small haloes merge to form more massive haloes. Anisotropic distribution of subhaloes have been observed in different simulation, and it may have implications for gravitational lensing, galaxy quenching, predicting galaxy & halo shape, etc.
+						<b>A commonly proprosed cause to the anisotropic distribution is the anisotropic accretion along the cosmic filaments.</b> In this study, we use simulation data from <a href="https://www.tng-project.org/">IllustrisTNG</a> to answer the questions on:
+						<ul style="margin-top:-30px;">
+							<li>Coherence of accretion along the filament</li>
+							<li>Relative position of Subhaloes to the major axis</li>
+							<li>Subhalo orbits after accretion and their physical implication</li>
+						</ul>
+						</p>
+
+						<div class="box alt">
+							<div class="row gtr-50 gtr-uniform">
+								<div class="col-7"><span class="image fit"><img src="images/researchPic/tng.jpg" alt="" /></span></div>
+								<div class="col-5" width="260" height="300"><span class="image fit" ><img src="images/researchPic/accretionOrbit.png" alt="" /></span></div>
+							</div>
+						</div>
+
+						<h1>Result </h1>
+						<p style="margin-top:-20px;">
+							Here I present some of the most interesting results.
+						</p>
+
+						<h2>Coherent accretion through filatments </h2>
+
+						<div class="row gtr-50 gtr-uniform">
+							<div class="col-6"><span class="image fit" ><img src="images/researchPic/kdemap.png" alt="" />
+								<figcaption></figcaption>
+							</span></div>
+							<div class="col-6"><span class="image fit" ><img src="" alt="" /><figcaption>
+								Fig 1 - Example of a spherical KDE map of subhalo accretion direction. The host halo is the central subhalo of groupID 35 at snapshot 99 in TNG300-1. The plot can be interpreted as the subhalo accretion direction mapped onto the celestial sphere with the host halo at the center. The contours are constructed based on the density of the point distribution, using spherical KDE with a Von Mises-Fisher kernel. We observe that more halos are accreted through the densest region, which occupies a relatively small fraction of the entire sphere. The subhalos, represented by points on the sphere, are color-coded by their accretion time (in snapshots). The earlier they are accreted, the darker they appear on the sphere.</figcaption>
+							</span></div>
+						<div class="col-6"><span class="image fit"><img src="images/researchPic/CoherentAccretion.png" alt="" />
+							<figcaption></figcaption>
+						</span></div>
+						<div class="col-6"><span class="image fit"><img src="" alt="" />
+							<figcaption>Fig 2 - Evidence of coherent accretion through filament structures. Calculate by binning 374 groups with mass greater than 10<sup>14</sup> M<sub>sun</sub>. 68 percent of the subhalos accreted through the 34 percent of the region on the sphere, which correspond to the filament structures connecting to the sphere halo. Typically, a host halo is connected by two or tree major filaments.</figcaption>
+						</span></div>
+						</div>
+
+						<h2 style="margin-top:40px;">Relation between subhalo peak mass and accretion time</h2>
+						<div class="row gtr-50 gtr-uniform">
+							<div class="col-12"><span class="image fit" ><img src="images/researchPic/MassBin 16.png" alt="" />
+								<figcaption>Fig 3 - Example plot of binning subhalo orbits inside a halo (groupID: 16) by subhalo peak mass, normalized by the host halo mass. Y-axis represents the angle between host halo major axis vector and the vector connecting subhalo and host halo center of mass. The orbit of each subhalo is color-coded by their accretion time. We observe that subhalos of higher peak mass tend to accrete earlier. The conclusion remains true after binning all group.</figcaption>
+							</span></div>
+						</div>
+
+						<h2 style="margin-top:40px;">Mode separation of subhalo orbits after accretion</h2>
+						<div class="row gtr-50 gtr-uniform">
+							<div class="col-6"><span class="image fit" ><img src="images/researchPic/mode separation.png" alt="" />
+								<figcaption></figcaption>
+							</span></div>
+							<div class="col-6"><span class="image fit" ><img src="" alt="" />
+								<figcaption>Fig 4 - Independent of accretion time, subhalo orbits might show similar trends when being described using dynamical time. We hope to separate different subhalo orbit modes and investigate their physical implication. We first flipped the interpolated orbit to make the subhalo infall angle fall between 0 and &pi;/2 (0 deg and 90 deg). Subhalo accreted at angle &theta; is physically of no difference from that accreted at angle (180 - &theta;). Then we treat the orbits as vectors of dimention 200 and feed the orbits into a k-mean clustering algorithm. This graph displays the clustering result of k=10.<br><br>
+								Section below shows phase plot animation of subhalos in selected modes.</figcaption>
+							</span></div>
+						</div>
+						
+						
+						<h2 style="margin-top:40px;">Animations</h2>
+
+						<p style="margin-top:-30px;">
+						<video width="260" height="300" controls="controls autoplay">
+							<source src="images/researchPic/cluster0.mp4" type="video/mp4">
+						</video>
+
+						<video width="260" height="300" controls="controls autoplay">
+							<source src="images/researchPic/cluster1.mp4" type="video/mp4">
+						</video>
+						</p>
+					</section>
+					
 
 				<!-- Four -->
 				<!--
