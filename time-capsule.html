@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>About Me</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="./javascript/themeLoader.js" defer></script>
+</head>
+
+<body>
+    <script src="./javascript/home.js"></script>
+    <div class="divider left-divider"></div>
+    <div class="content" style="overflow-y: auto;">
+
+        
+
+
+        <!-- Empty Spacing -->
+        <div class="spacer" id="homePageSpacing" style="height: 20px;"></div> 
+        
+        <div id="TC_header" style="text-align: left; width: 90%;">
+            <h1 style="font-family: ElegantFont; margin: 0; margin-bottom: 2.5%;">Time Capsule</h1>
+            <p style="margin-left: 1%; text-align: left;">
+                I hope to use this page to record my thoughts and notes throughout my graduate school journey. The topics may extend beyond physics.
+            </p>
+
+            <div class="spacer"  style="margin-top: 0%;"></div> 
+            
+            <p style="margin-left: 1%; text-align: right;">    
+                    2024.12.07
+            </p>
+        </div>
+
+        
+        <!-- Lower 3 Buttons -->
+        <div class="options" style="margin-top: 3%; margin-bottom: 3%;">
+        
+            <!-- "Works" Button -->
+            <button class="option-button" onclick="window.location.href='./works.html';">Works</button>
+
+            <!-- "Time Capsule" Button -->
+            <button class="option-button" onclick="window.location.href='./index.html';">Home</button>
+
+            <!-- "Contact Me" Button -->  
+            <button class="option-button" id="copy-button">Contact Me</button>
+        </div>
+
+            <!-- Feedback Message -->
+            <p id="copy-feedback" style="display: none; margin-top: 1%; margin-bottom: 3%; color: green; background-color: white; padding: 10px 20px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); border-radius: 20px; font-family: NerdMono;">Email Copied to Clipboard!!</p>
+
+            <script>
+                document.getElementById('copy-button').addEventListener('click', () => {
+                    const email = "ude8pq@virginia.edu"; // Replace with your actual email
+                    navigator.clipboard.writeText(email).then(() => {
+                        const feedback = document.getElementById('copy-feedback');
+                        feedback.style.display = 'block'; // Show feedback message
+                        setTimeout(() => {
+                            feedback.style.display = 'none'; // Hide feedback message after 2 seconds
+                        }, 2000);
+                    }).catch(err => {
+                        alert('Failed to copy email to clipboard');
+                    });
+                });
+            </script>
+
+        <!-- Separator Line -->
+        <hr id="TC_separator" class="separator-line" style="margin-top: 0.5%; margin-bottom: 5.0%;">
+
+
+        <div id="index_main_text;" style="font-size: 0.9rem; margin-bottom: 3%; text-align:center; width: 90%">
+            <ul style="list-style-type: square; margin-left: 20px; text-align: left;">
+                <li>To</li>
+                <li>Be</li>
+                <li>Updated</li>
+                <li>Please</li>
+                <li>Visit</li>
+                <li>Later</li>
+                <li>...</li>
+            </ul>
+                   
+        </div>
+
+        
+
+        
+    </div>
+    <div class="divider right-divider"></div>
+
+    
+</body>
+
+</html>

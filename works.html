@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>About Me</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="./javascript/themeLoader.js" defer></script>
+</head>
+
+<body>
+    <script src="./javascript/home.js"></script>
+    <div class="divider left-divider"></div>
+    <div class="content" style="overflow-y: auto;">
+
+        
+        <div id="top_spacer" class="spacer"  style="height: 10%;"></div> 
+        
+        
+        <div id="TC_header" style="text-align: left; width: 90%;">
+            <h1 style="font-family: ElegantFont; margin: 0; margin-bottom: 2.5%;">Works</h1>
+            <p style="margin-left: 1%; text-align: left;">
+                This page has a list of my recent works, in reverse chronological order.
+            </p>
+
+        </div>
+
+
+        <!-- Lower 3 Buttons -->
+        <div class="options" style="margin-top: 5%; margin-bottom: 0%;">
+            <!-- "Works" Button -->
+        <button class="option-button" onclick="window.location.href='./index.html';">Home</button>
+
+        <!-- "Time Machine" Button -->
+        <button class="option-button" onclick="window.location.href='./time-capsule.html';">Time Capsule</button>
+
+            
+            <!-- "Contact Me" Button -->  
+            <button class="option-button" id="copy-button">Contact Me</button>
+        </div>
+
+            <!-- Feedback Message -->
+            <p id="copy-feedback" style="display: none; margin-top: 3%; margin-bottom: -1%; color: green; background-color: white; padding: 10px 20px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); border-radius: 20px; font-family: NerdMono;">Email Copied to Clipboard!!</p>
+
+            <script>
+                document.getElementById('copy-button').addEventListener('click', () => {
+                    const email = "ude8pq@virginia.edu"; // Replace with your actual email
+                    navigator.clipboard.writeText(email).then(() => {
+                        const feedback = document.getElementById('copy-feedback');
+                        feedback.style.display = 'block'; // Show feedback message
+                        setTimeout(() => {
+                            feedback.style.display = 'none'; // Hide feedback message after 2 seconds
+                        }, 2000);
+                    }).catch(err => {
+                        alert('Failed to copy email to clipboard');
+                    });
+                });
+            </script>
+
+        <!-- Separator Line -->
+        <hr id="index_separator" class="separator-line" style="margin-bottom: 2%;">
+
+        <div id="index_main_text;" style="font-size: 0.9rem; margin-top: 0pt; margin-bottom: 3%; text-align:center; width: 90%">
+            <ul style="list-style-type: square; margin-left: 20px; text-align: left;">
+                <li><span style="font-family: NerdFont_it;">Subhalos in Galaxy Clusters: Coherent Accretion and Internal Orbits</span></li>
+                Han, Chi; Wang, Kuan; Avestruz, Camille; Anbajagane, Dhayaa<br>
+                <a href="https://ui.adsabs.harvard.edu/abs/2024ApJ...974....4H/abstract" target="_blank">2024ApJ...974....4H</a>
+
+                <li><span style="font-family: NerdFont_it;">The ARMADA Survey - Photometric Masses and Age for Intermediate Mass Binary Systems</span> </li>
+                <a href="./assets/work/ARMADA_poster_chi.png" target="_blank">My first undergraduate poster, April 2023</a>
+            </ul>
+        </div>
+
+        
+
+    </div>
+    <div class="divider right-divider"></div>
+
+    
+</body>
+
+</html>
