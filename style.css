@@ -48,7 +48,7 @@
 body, html {
     height: 100%;
     font-family: 'NerdFont';
-    background: url('./assets/images/background.png') no-repeat center center fixed; 
+    background: url('./assets/images/background_.png') no-repeat center center fixed; 
     background-size: cover; /* Ensures the image covers the screen */
     background-attachment: fixed; /* Keeps the image fixed during scrolling */
     background-position: center; /* Centers the image */
@@ -84,7 +84,7 @@ body {
 
 /* Vertical Divider Lines */
 .divider {
-    width: 6pt;
+    width: 1.5pt;
     height: 100%;
     background-color: var(--text-color);
     position: relative;
