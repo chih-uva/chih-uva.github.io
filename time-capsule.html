@@ -4,14 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>About Me</title>
+    <title>Time Capsule</title>
     <link rel="stylesheet" href="style.css">
 
-    <script src="./javascript/themeLoader.js" defer></script>
 </head>
 
 <body>
-    <script src="./javascript/home.js"></script>
     <div class="divider left-divider"></div>
     <div class="content" style="overflow-y: auto;">
 
@@ -70,7 +68,7 @@
         <hr id="TC_separator" class="separator-line" style="margin-top: 0.5%; margin-bottom: 5.0%;">
 
 
-        <div id="index_main_text;" style="font-size: 0.9rem; margin-bottom: 3%; text-align:center; width: 90%">
+        <!-- <div id="index_main_text;" style="font-size: 0.9rem; margin-bottom: 3%; text-align:center; width: 90%">
             <ul style="list-style-type: square; margin-left: 20px; text-align: left;">
                 <li>To</li>
                 <li>Be</li>
@@ -81,7 +79,90 @@
                 <li>...</li>
             </ul>
                    
+        </div> -->
+
+
+        <div id="index_main_text" style="font-size: 0.9rem; margin-bottom: 3%; text-align:center; width: 90%">
+            <ul id="post-list" style="list-style-type: square; margin-left: 20px; text-align: left;">
+                <!-- Posts will be injected here -->
+            </ul>
+            <div style="margin-top: 10px;">
+                <button id="prev-page">Previous</button>
+                <span id="page-info"></span>
+                <button id="next-page">Next</button>
+            </div>
         </div>
+
+        <script>
+    // Example blog posts with url and date
+    const posts = [
+        { title: "First Post", category: "FIRST POST", url: "/posts/first-post/firstpost.html", date: "2025-06-07" },
+        { title: "please visit later for more posts ;)", category: "Life", url: "#", date: "" },
+        // { title: "Third Post", category: "Math", url: "#", date: "2024-06-03" },
+        // { title: "Fourth Post", category: "Physics", url: "#", date: "2024-06-04" },
+        // { title: "Fifth Post", category: "Notes", url: "#", date: "2024-06-05" },
+        // { title: "Sixth Post", category: "Life", url: "#", date: "2024-06-06" },
+        // { title: "Seventh Post", category: "Physics", url: "#", date: "2024-06-07" },
+        // { title: "Eighth Post", category: "Other", url: "#", date: "2024-06-08" }
+        // ...add more posts as needed
+    ];
+
+    const postsPerPage = 6;
+    let currentPage = 1;
+
+    function renderPosts() {
+        const postList = document.getElementById('post-list');
+        postList.innerHTML = '';
+        const start = (currentPage - 1) * postsPerPage;
+        const end = start + postsPerPage;
+        const pagePosts = posts.slice(start, end);
+
+        pagePosts.forEach(post => {
+            const li = document.createElement('li');
+            // Create clickable title
+            const link = document.createElement('a');
+            link.href = post.url;
+            link.textContent = `[${post.category}] ${post.title}`;
+            // link.target = "_blank"; // Open in new tab (optional)
+            li.appendChild(link);
+
+            // Add date
+            const dateSpan = document.createElement('span');
+            dateSpan.className = 'post-date';
+            dateSpan.textContent = post.date;
+            li.appendChild(dateSpan);
+
+            postList.appendChild(li);
+        });
+
+        // Update page info
+        const pageInfo = document.getElementById('page-info');
+        const totalPages = Math.ceil(posts.length / postsPerPage);
+        pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
+
+        // Enable/disable buttons
+        document.getElementById('prev-page').disabled = currentPage === 1;
+        document.getElementById('next-page').disabled = currentPage === totalPages;
+    }
+
+    document.getElementById('prev-page').onclick = function() {
+        if (currentPage > 1) {
+            currentPage--;
+            renderPosts();
+        }
+    };
+    document.getElementById('next-page').onclick = function() {
+        const totalPages = Math.ceil(posts.length / postsPerPage);
+        if (currentPage < totalPages) {
+            currentPage++;
+            renderPosts();
+        }
+    };
+
+    // Initial render
+    renderPosts();
+</script>
+
 
         
 
