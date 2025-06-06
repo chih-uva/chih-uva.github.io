@@ -50,4 +50,4 @@ I think (at least for now) I will continue doing this thing. I feel both my Engl
 
 I plan to take JLPT N1 exam at the end of this year, so wish me good luck.. After passing the N1 exam (hopefully this December), I plan to keep refining my Japanese with 八木さん - my super nice advisor, and start learning Flemish - the Dutch language spoken in Belgium, hopefully there will be enough resource for it.
 
-![My Ridley Flandrien Bike](./bike.jpg "My Ridley Flandrien Bike")
+![My Ridley Flandrien Bike](./bike.JPG "My Ridley Flandrien Bike")
