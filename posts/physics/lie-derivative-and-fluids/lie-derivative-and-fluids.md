@@ -1,5 +1,5 @@
 <div class="yaml-meta" style="margin-bottom:4%">
-Title: Fluid Equations and Lie Derivatives<br>
+Title: Lie Derivative and Fluids<br>
 Date: 2025-06-12<br>
 Category: Physics<br>
 Tags: lie derivatives, fluids, stars, physics<br>
@@ -9,7 +9,7 @@ Tags: lie derivatives, fluids, stars, physics<br>
 
 This is an **<a style="font-family:ElegantFont">experimental</a>** first post in physics. I somehow made it resemble a textbook or a classroom note too much. I am not sure if this is the final form I want, but I did spend a fair amount of time making this post — whatever improvements there are, I will make them next time (topic not decided yet).
 
-# Lie Derivatives and Fluids
+# Lie Derivative and Fluids
 
 This post serves as a concise note with necessary derivations to understand perturbation in fluids. One would find it useful when modeling stars, their EOS, or stability, as one treats the stellar interior as fluid units, and for a single unit, one only cares about its bulk properties. The reason Lie derivative is included is that, with the presence of a gravitational field, the spacetime metric where the fluid resides may no longer be Minkowski. We therefore need to treat it with techniques in differential geometry.
 
