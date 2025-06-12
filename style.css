@@ -45,7 +45,7 @@
 }
 
 
-body, html {
+html {
     height: 100%;
     font-family: 'NerdFont';
     background: url('./assets/images/background_.png') no-repeat center center fixed; 
@@ -63,7 +63,7 @@ body, html {
 body {
     height: 100%;
     font-family: 'NerdFont';
-    background: url('./assets/images/background.png') no-repeat center center fixed; /* Replace with your image path */
+    background: url('./assets/images/background_.png') no-repeat center center fixed; /* Replace with your image path */
    
     background-size: cover; /* Ensures the image covers the entire background */
     color: var(--text-color);
@@ -281,14 +281,14 @@ body {
 .yaml-meta {
     font-size: 0.7em;
     color: #888;
-    margin-bottom: 1em;
+    margin-bottom: 0.3em;
     font-family: ElegantFont;
 }
 
 /* Markdown Styles*/
 #markdown-content h1 {
     color: #232D4B;
-    font-size: 2.2em;
+    font-size: 1.8em;
     border-bottom: 2px solid #E57200;
     margin-top: 1.5em;
     margin-bottom: 0.5em;
@@ -299,6 +299,10 @@ body {
     font-size: 1.5em;
     margin-top: 1.2em;
     margin-bottom: 0.4em;
+}
+
+#markdown-content p {
+    margin-bottom: 0.75em; /* Increase for more space, decrease for less */
 }
 
 #markdown-content pre {
