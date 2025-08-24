@@ -13,7 +13,7 @@ There might be typos and mistakes. If you happen to find one, please do not hesi
 ------
   <a style="height: 3%"></a>
 
-- <a href="./Physics_406_ClassNote.pdf" target="_blank">UVA Physics 7010 (Theoretical Mechanics I)</a>
-- <a href="./Physics_406_ClassNote.pdf" target="_blank">UVA Physics 7410 (Electricity and Magnetism I)</a>
-- <a href="./Physics_406_ClassNote.pdf" target="_blank">UVA Physics 7610 (Quantum Theory I)</a>
+- <a href="#" target="_blank">UVA Physics 7010 (Theoretical Mechanics I)</a>
+- <a href="#" target="_blank">UVA Physics 7410 (Electricity and Magnetism I)</a>
+- <a href="#" target="_blank">UVA Physics 7610 (Quantum Theory I)</a>
 - <a href="./Physics_406_ClassNote.pdf" target="_blank">UMich Physics 406 (Statistical Mechanics)</a>
