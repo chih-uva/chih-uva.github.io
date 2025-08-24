@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>lie derivative</title>
+    <title>Notes Collection</title>
     <link rel="stylesheet" href="/style.css">
     <!-- KaTeX CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
@@ -27,41 +27,23 @@
         </div>
 
         <script>
-            function extractMathBlocks(text) {
-                const mathBlocks = [];
-                // Replace $$...$$ blocks
-                text = text.replace(/\$\$([\s\S]+?)\$\$/g, (match) => {
-                    mathBlocks.push(match);
-                    return `@@MATHBLOCK${mathBlocks.length - 1}@@`;
-                });
-                // Replace $...$ inline math
-                text = text.replace(/\$([^\$]+?)\$/g, (match) => {
-                    mathBlocks.push(match);
-                    return `@@MATHBLOCK${mathBlocks.length - 1}@@`;
-                });
-                return { text, mathBlocks };
-            }
+            fetch('./notes-collection.md')
+            .then(response => response.text())
+            .then(text => {
+                let html = marked.parse(text);
 
-            function restoreMathBlocks(html, mathBlocks) {
-                return html.replace(/@@MATHBLOCK(\d+)@@/g, (match, idx) => mathBlocks[idx]);
-            }
+                // Replace <em> and </em> with _ only inside math blocks
+                // This is a simple but effective approach for most cases:
+                html = html.replace(/<em>/g, '_').replace(/<\/em>/g, '_');
 
-            // Usage:
-            fetch('./lie-derivative-and-fluids.md')
-                .then(response => response.text())
-                .then(text => {
-                    const { text: mdNoMath, mathBlocks } = extractMathBlocks(text);
-                    let html = marked.parse(mdNoMath);
-                    html = restoreMathBlocks(html, mathBlocks);
-
-                    document.getElementById('markdown-content').innerHTML = html;
-                    renderMathInElement(document.getElementById('markdown-content'), {
-                        delimiters: [
-                            { left: "$$", right: "$$", display: true },
-                            { left: "$", right: "$", display: false }
-                        ]
-                    });
+                document.getElementById('markdown-content').innerHTML = html;
+                renderMathInElement(document.getElementById('markdown-content'), {
+                delimiters: [
+                    { left: "$$", right: "$$", display: true },
+                    { left: "$", right: "$", display: false }
+                ]
                 });
+            });
         </script>
 
         

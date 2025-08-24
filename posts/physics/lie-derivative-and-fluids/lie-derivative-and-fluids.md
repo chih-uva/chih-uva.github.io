@@ -7,7 +7,7 @@ Tags: lie derivatives, fluids, stars, physics<br>
 </div>
 
 
-This is an **<a style="font-family:ElegantFont">experimental</a>** first post in physics. I somehow made it resemble a textbook or a classroom note too much. I am not sure if this is the final form I want, but I did spend a fair amount of time making this post — whatever improvements there are, I will make them next time (topic not decided yet).
+This is an **<a style="font-family:ElegantFont">experimental</a>** first post in physics. I somehow made it resemble a textbook or a classroom note too much. I am not sure if this is the final form I want, but I did spend a fair amount of time making this post - whatever improvements there are, I will make them next time (topic not decided yet).
 
 # Lie Derivative and Fluids
 
